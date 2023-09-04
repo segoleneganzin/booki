@@ -1,6 +1,6 @@
 /****** Imports ***********/
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
-/****** General ***********/
+/************************************************* General *************************************************/
 * {
   font-family: "Raleway", sans-serif;
 }
@@ -8,7 +8,9 @@
 :root {
   --main-color: #0065fc;
   --main-bg-color: #f2f2f2;
+  --bg-color: #ffffff;
   --filter-bg-color: #deebff;
+  --border-color: #d4d8db;
   /* --body-font-size: 1rem;
     --body-highlight-font-size: 1rem;
 
@@ -32,62 +34,184 @@
   text-align: left;
 }
 
+.flex-column-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5em;
+}
+
+.highlight-word {
+  font-size: 18px;
+  font-weight: 700;
+}
+
 body {
   margin: 0%;
+}
+
+/* main properties */
+main {
+  max-width: 1440px;
+  padding: 0 50px;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-  font-size: 16px;
-  /* font-weight: 400; */
 }
 
-/* header properties */
+p,
+a {
+  font-size: 16px;
+}
+
+p {
+  margin: 0;
+}
+
+/************************************************* header *************************************************/
 header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 30px;
 }
 
 .header__logo {
-  max-width: 5%;
+  max-width: 5em;
   padding: 30px 50px;
 }
 
 .header__nav {
-  display: flex;
   align-items: flex-start;
+  display: flex;
+  gap: 6.8em;
   padding: 0 25px;
-  gap: 68px;
 }
 .header__nav-item {
   padding-top: 14px;
 }
 
 .header__nav-item:hover {
-  color: var(--main-color);
   border-top: 2px solid var(--main-color);
+  color: var(--main-color);
 }
 
-/* main properties */
-.main-container {
-  /* width: 100%; */
-  max-width: 1440px;
-  padding: 0 50px;
-  /* box-sizing: border-box; */
-}
-
-/* section properties */
+/************************************************* section *************************************************/
 .section-title {
-  margin: 0;
   font-size: 22px;
+  margin: 0;
 }
+
+/********************************* search area properties *********************************/
+.search-area-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+/************* Search area form *************/
+.search-area__form {
+  display: flex;
+  align-items: center;
+}
+/* search section (label + input) */
+.search-section {
+  display: flex;
+  border-radius: 15px 0 0 15px;
+  border: 1px solid var(--border-color);
+  border-right: none;
+  overflow: auto;
+}
+.search-area__form-label {
+  background-color: var(--border-color);
+}
+
+.search-area__form-label i {
+  color: black;
+  padding: 15px;
+}
+
+.search-area__form-city-input {
+  border: none;
+  padding: 14px;
+  font-size: 18px;
+}
+
+/* search submit */
+.search-area__form-submit {
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
+  border-radius: 0 15px 15px 0;
+  color: var(--bg-color);
+  padding: 14px;
+}
+
+.search-area__form-submit--mobile {
+  display: none;
+  background-color: var(--main-color);
+  border: 1px solid var(--main-color);
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: var(--bg-color);
+  padding: 15px;
+}
+
+/************* Search area filter *************/
+.search-area__filters {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.search-area__filters-selector {
+  display: flex;
+  gap: 1.5em;
+}
+
+.search-area__filter-button {
+  font-size: 17px;
+  font-weight: 700;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 1em;
+  height: 3em;
+  padding: 4px 19px;
+  border: 2px solid var(--border-color);
+  border-radius: 25px;
+  background-color: var(--bg-color);
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.search-area__filter-button:hover {
+  background-color: var(--filter-bg-color);
+}
+
+/************* Search area information *************/
+.search-area__informations {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  gap: 1em;
+}
+
+.search-area__informations-icon {
+  border: 1px solid var(--border-color);
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  text-align: center;
+}
+.search-area__informations-icon i {
+  margin: 3px auto;
+}
+/********************************* card *********************************/
 
 .card {
   background-color: white;
   border-radius: 20px;
-  padding: 5px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+  padding: 5px;
 }
 
 .card img {
@@ -106,7 +230,7 @@ header {
   color: var(--main-bg-color);
 }
 
-/****** Hosting And Popular ***********/
+/********************************* Hosting And Popular properties *********************************/
 .hostings-and-popular {
   display: flex;
   justify-content: space-between;
@@ -115,24 +239,24 @@ header {
 .hostings-and-popular section {
   background-color: var(--main-bg-color);
   border-radius: 20px;
-  padding: 30px;
   box-sizing: border-box;
+  padding: 30px;
 }
 
-/****** Hebergements ***********/
+/************* Hostings properties *************/
 .hostings {
   width: 65%;
 }
 
-/****** Populaires ***********/
+/************* Popular properties *************/
 .popular {
   width: 32%;
 }
 
 .popular-title {
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .popular-cards .card {
@@ -141,24 +265,24 @@ header {
 }
 
 .popular-cards img {
-  width: 33%;
-  height: 136px;
-  border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  height: 136px;
+  width: 33%;
 }
 
 .popular-cards .card-content {
-  width: 67%;
-  padding-left: 15px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-sizing: border-box;
+  padding-left: 15px;
+  width: 67%;
 }
 
 .popular-cards .card-title {
-  margin-top: 10px;
   margin-bottom: 4px;
+  margin-top: 10px;
 }
 
 .popular-cards .card-subtitle {
@@ -169,14 +293,16 @@ header {
   margin-bottom: 5px;
 }
 
+/********************************* Activities properties *********************************/
+
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
-/****** Media queries ***********/
+/************************************************* Media queries *************************************************/
 /* Large devices (devices over than 1440px) - applies a white margin */
 @media (min-width: 1440px) {
   body {
-    width: 1440px;
     margin: auto;
+    width: 1440px;
   }
 }
 
@@ -191,8 +317,8 @@ header {
   }
 
   .popular {
-    width: 100%;
     margin-top: 50px;
+    width: 100%;
   }
 
   .popular-cards {
@@ -217,4 +343,24 @@ header {
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
   /* ... */
+
+  /************* Search area form *************/
+  /* search submit */
+  .search-area__form-submit {
+    display: none;
+  }
+
+  .search-area__form-submit--mobile {
+    display: block;
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: var(--main-bg-color);
+    padding: 15px;
+  }
+
+  .search-area__form-submit--mobile i {
+    color: var(--main-bg-color);
+  }
 }
