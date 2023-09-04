@@ -19,20 +19,84 @@
   </head>
 
   <body>
-    <div class="main-container">
-      <header>
-        <img />
-        <nav></nav>
-      </header>
+    <!-- header -->
+    <header>
+      <img
+        src="./images/logo/Booki.png"
+        alt="logo booki"
+        class="header__logo"
+      />
+      <nav class="header__nav">
+        <a href="#hostings" class="header__nav-item talign-c">Hébergements</a>
+        <a href="#activities" class="header__nav-item talign-c">Activités</a>
+      </nav>
+    </header>
 
+    <div class="main-container">
       <main>
         <!-- search area -->
-        <div class="search-area"></div>
+        <div class="search-area">
+          <h1 class="section-title">
+            Trouvez votre hébergement pour des vacances de rêve
+          </h1>
+          <p>En plein centre ville ou en plaine nature</p>
+          <form class="search-area__form">
+            <label class="search-area__form-label"></label>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="52"
+                height="51"
+                viewBox="0 0 52 51"
+                fill="none"
+              >
+                <path
+                  d="M51.5 1V0.5H51H16C7.43959 0.5 0.5 7.43959 0.5 16V35C0.5 43.5604 7.43959 50.5 16 50.5H51H51.5V50V1Z"
+                  fill="#F2F2F2"
+                  stroke="#F2F2F2"
+                />
+                <path
+                  d="M25.1359 33.5955C23.2328 31.3326 19 25.8481 19 22.7675C19 19.0299 22.134 16 26 16C29.8646 16 33 19.0299 33 22.7675C33 25.8481 28.7344 31.3326 26.8641 33.5955C26.4156 34.1348 25.5844 34.1348 25.1359 33.5955ZM26 25.0234C27.287 25.0234 28.3333 24.0117 28.3333 22.7675C28.3333 21.5233 27.287 20.5117 26 20.5117C24.713 20.5117 23.6667 21.5233 23.6667 22.7675C23.6667 24.0117 24.713 25.0234 26 25.0234Z"
+                  fill="black"
+                />
+              </svg>
+              <!-- <i class="fa-solid fa-location-dot"></i> -->
+            </label>
+            <input type="text" class="search-area__form-city talign-c" />
+            <input
+              type="submit"
+              value="Rechercher"
+              class="search-area__form-button talign-c"
+            />
+          </form>
+          <section class="search-area__filters">
+            <h2 class="section-title-two talign-c">Filtres</h2>
+            <section class="search-area__filters-selector">
+              <button class="search-area__filter-button">
+                <i class="fa-solid fa-money-bill-wave"></i>
+                &Eacute;conomique
+              </button>
+              <button class="search-area__filter-button">
+                <i class="fa-solid fa-person"></i>Familial
+              </button>
+              <button class="search-area__filter-button">
+                <i class="fa-solid fa-heart"></i>Romantique
+              </button>
+              <button class="search-area__filter-button">
+                <i class="fa-solid fa-fire"></i>Nos pépites
+              </button>
+            </section>
+          </section>
+          <section class="search-area__informations">
+            <i class="fa-solid fa-info"></i>
+            <p>Plus de 500 logements sont disponibles dans cette ville</p>
+          </section>
+        </div>
+        <!--TODO Prevoir 2 verion du form (mobile/desktop) -->
         <div class="hostings-and-popular">
           <!-- hosting section -->
-          <section class="hostings"></section>
+          <section class="hostings" id="hostings"></section>
           <!-- popular section -->
-          <section class="popular">
+          <section class="popular" id="popular">
             <div class="popular-title">
               <h1 class="section-title">Les plus populaires</h1>
               <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
@@ -48,7 +112,7 @@
                   />
                   <div class="card-content">
                     <div class="card-txt">
-                      <h2 class="card-title">Hôtel Le soleil du matin</h2>
+                      <h3 class="card-title">Hôtel Le soleil du matin</h3>
                       <p class="card-subtitle">
                         Nuit à partir de 128<span class="euro">€</span>
                       </p>
@@ -76,9 +140,9 @@
                   />
                   <div class="card-content">
                     <div class="card-txt">
-                      <h2 class="card-title">
+                      <h3 class="card-title">
                         Chambres d’hôtes Au cœur de l’eau
-                      </h2>
+                      </h3>
                       <p class="card-subtitle">
                         Nuit à partir de 71<span class="euro">€</span>
                       </p>
@@ -106,7 +170,7 @@
                   />
                   <div class="card-content">
                     <div class="card-txt">
-                      <h2 class="card-title">Hôtel Bleu et Blanc</h2>
+                      <h3 class="card-title">Hôtel Bleu et Blanc</h3>
                       <p class="card-subtitle">
                         Nuit à partir de 68<span class="euro">€</span>
                       </p>
@@ -128,6 +192,7 @@
             </div>
           </section>
         </div>
+        <section class="activities" id="activities"></section>
       </main>
       <footer></footer>
     </div>
