@@ -37,21 +37,21 @@
 .flex-column-content {
   display: flex;
   flex-direction: column;
-  gap: 3.5em;
+  gap: 2.1875em;
 }
 
 .highlight-word {
-  font-size: 18px;
+  font-size: 1.125em;
   font-weight: 700;
 }
 
 body {
-  margin: 0%;
+  max-width: 1440px;
+  margin: auto;
 }
 
 /* main properties */
 main {
-  max-width: 1440px;
   padding: 0 50px;
 }
 
@@ -62,11 +62,22 @@ a {
 
 p,
 a {
-  font-size: 16px;
+  font-size: 1em;
 }
 
 p {
   margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0%;
+  padding: 0%;
+}
+
+ul,
+li {
+  margin-top: 15px;
 }
 
 /************************************************* header *************************************************/
@@ -77,14 +88,14 @@ header {
 }
 
 .header__logo {
-  max-width: 5em;
+  max-width: 5%;
   padding: 30px 50px;
 }
 
 .header__nav {
   align-items: flex-start;
   display: flex;
-  gap: 6.8em;
+  gap: 4.25em;
   padding: 0 25px;
 }
 .header__nav-item {
@@ -96,17 +107,11 @@ header {
   color: var(--main-color);
 }
 
-/************************************************* section *************************************************/
-.section-title {
-  font-size: 22px;
-  margin: 0;
-}
-
 /********************************* search area properties *********************************/
 .search-area-title {
   display: flex;
   flex-direction: column;
-  gap: 0.8em;
+  gap: 0.5em;
 }
 /************* Search area form *************/
 .search-area__form {
@@ -133,7 +138,6 @@ header {
 .search-area__form-city-input {
   border: none;
   padding: 14px;
-  font-size: 18px;
 }
 
 /* search submit */
@@ -158,23 +162,25 @@ header {
 /************* Search area filter *************/
 .search-area__filters {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 1.5em;
+  gap: 0.9375em;
 }
 
 .search-area__filters-selector {
   display: flex;
-  gap: 1.5em;
+  flex-wrap: wrap;
+  gap: 0.9375em;
 }
 
 .search-area__filter-button {
-  font-size: 17px;
+  font-size: 1.0625em;
   font-weight: 700;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  gap: 1em;
-  height: 3em;
+  gap: 0.625em;
+  height: 3.125em;
   padding: 4px 19px;
   border: 2px solid var(--border-color);
   border-radius: 25px;
@@ -192,7 +198,7 @@ header {
   display: flex;
   align-items: center;
   align-self: stretch;
-  gap: 1em;
+  gap: 0.625em;
 }
 
 .search-area__informations-icon {
@@ -205,9 +211,28 @@ header {
 .search-area__informations-icon i {
   margin: 3px auto;
 }
+
+/************************************************* section *************************************************/
+.section-title {
+  font-size: 22px;
+  margin: 0;
+}
+
+.section-container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.875em;
+}
+
 /********************************* card *********************************/
+.cards-container {
+  display: flex;
+  gap: 1.875em;
+}
 
 .card {
+  display: flex;
   background-color: white;
   border-radius: 20px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
@@ -220,14 +245,32 @@ header {
 
 .card-title {
   font-size: 16px;
+  margin-bottom: 4px;
+  margin-top: 10px;
 }
 
+.card-subtitle {
+  margin: 0;
+}
+
+.card-content {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+  /* width: 67%; */
+  justify-content: space-between;
+}
 .euro {
   font-weight: 700;
 }
 
 .neutral-star {
   color: var(--main-bg-color);
+}
+
+.card-rating {
+  margin-bottom: 5px;
 }
 
 /********************************* Hosting And Popular properties *********************************/
@@ -240,12 +283,41 @@ header {
   background-color: var(--main-bg-color);
   border-radius: 20px;
   box-sizing: border-box;
-  padding: 30px;
 }
 
 /************* Hostings properties *************/
 .hostings {
   width: 65%;
+}
+
+.hostings-cards {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.hostings-cards .card {
+  flex-direction: column;
+  gap: 0.25em;
+  /* flex: 1 0 0; */
+  /* width: 100%; */
+  /* justify-content: flex-start; */
+  /* align-self: stretch; */
+}
+
+.hostings-cards img {
+  border-radius: 20px 20px 0 0;
+  height: 124px;
+  align-self: stretch;
+}
+
+.hostings-cards .card-content {
+  gap: 0.5em;
+}
+
+.hostings-cards .card-txt {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
 }
 
 /************* Popular properties *************/
@@ -259,53 +331,60 @@ header {
   justify-content: space-between;
 }
 
-.popular-cards .card {
-  display: flex;
-  margin-top: 33px;
+.popular-cards {
+  flex-direction: column;
 }
 
 .popular-cards img {
-  border-bottom-left-radius: 20px;
-  border-top-left-radius: 20px;
+  border-radius: 20px 0 0 20px;
   height: 136px;
   width: 33%;
 }
 
-.popular-cards .card-content {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
+/* .popular-cards .card-content {
   justify-content: space-between;
-  padding-left: 15px;
-  width: 67%;
+} */
+
+/********************************* Activities properties *********************************/
+.activities-cards {
+  overflow: auto;
 }
 
-.popular-cards .card-title {
-  margin-bottom: 4px;
-  margin-top: 10px;
+.activities-cards .card {
+  flex-direction: column;
+  width: 100%;
+  height: 439px;
+  border-radius: 20px;
+  padding: 0;
+  gap: 0.625em;
 }
 
-.popular-cards .card-subtitle {
+.activities-cards img {
+  height: 380px;
+  flex-shrink: 0;
+  align-self: stretch;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.activities-cards .card-title {
+  padding: 5px 20px;
   margin: 0;
 }
 
-.popular-cards .card-rating {
-  margin-bottom: 5px;
+/********************************* Footer properties *********************************/
+.footer-container {
+  flex-direction: row;
+  background-color: var(--main-bg-color);
+  margin: 35px 50px 0 50px;
+  padding: 0px;
 }
 
-/********************************* Activities properties *********************************/
-
-/* Le code ci-dessous correspond à la version responsive uniquement */
+.footer-section {
+  padding: 20px;
+}
 
 /************************************************* Media queries *************************************************/
-/* Large devices (devices over than 1440px) - applies a white margin */
-@media (min-width: 1440px) {
-  body {
-    margin: auto;
-    width: 1440px;
-  }
-}
-
+/* Le code ci-dessous correspond à la version responsive uniquement */
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
   .hostings-and-popular {
