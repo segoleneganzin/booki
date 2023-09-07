@@ -253,10 +253,11 @@ header {
 .card__content-txt {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .card__content-rating {
-  margin-bottom: 5px;
+  padding-bottom: 5px;
 }
 
 .card__content-rating--neutral-star {
@@ -285,20 +286,19 @@ header {
 }
 
 .hostings__cards a {
-  /* flex: 1 30%; */
-  flex-basis: 30%;
+  width: 30%;
 }
 
 .hostings__cards .card {
   flex-direction: column;
   gap: 0.25rem;
   padding: 0 0 15px 0;
-  height: 192px;
+  height: 177px;
 }
 
 .hostings__cards img {
   border-radius: 20px 20px 0 0;
-  height: 124px;
+  min-height: 114px;
 }
 
 .hostings__cards .card__content {
@@ -325,12 +325,14 @@ header {
   flex-direction: column;
 }
 
+.popular__cards .card {
+  max-height: 145px;
+}
+
 .popular__cards img {
   border-radius: 20px 0 0 20px;
   height: 136px;
   width: 33%;
-}
-.popular__cards .card img {
   border-right: none;
 }
 
@@ -340,7 +342,7 @@ header {
 /********************************* Activities properties *********************************/
 .activities__cards a {
   /* flex-basis: 23%;*/
-  min-width: 23%;
+  width: 23%;
 }
 
 .activities__cards .card {
@@ -402,10 +404,6 @@ header {
     font-size: 1rem;
   }
 
-  /* .infos__filters-selector {
-    flex-wrap: nowrap;
-  } */
-
   /************* Hostings and popular tablet *************/
   .hostings-and-popular {
     flex-direction: column;
@@ -414,10 +412,6 @@ header {
   /***** hostings tablet *****/
   .hostings {
     width: 100%;
-  }
-
-  .hostings__cards > * {
-    flex: 1 1 100px;
   }
 
   /***** popular tablet *****/
@@ -429,7 +423,6 @@ header {
   .popular__cards {
     display: flex;
     flex-direction: row;
-    /* justify-content: space-between; */
     align-items: center;
     gap: 1.25rem;
   }
@@ -490,10 +483,6 @@ header {
     align-items: center;
   }
 
-  /* .infos__form {
-    width: 95%;
-  } */
-
   .infos__form-search {
     overflow: hidden;
     margin: auto;
@@ -535,6 +524,25 @@ header {
   }
 
   /************* Hostings and popular mobile *************/
+  /***** popular mobile *****/
+  #popular {
+    background-color: var(--main-bg-color);
+    border-radius: 0%;
+    margin-top: 0px;
+    padding: 30px 20px;
+  }
+
+  .popular__cards {
+    flex-direction: column;
+  }
+
+  .popular__cards a {
+    width: 100%;
+  }
+
+  .popular__cards img {
+    min-height: 146px;
+  }
   /***** hostings mobile *****/
   #hostings {
     order: 2;
@@ -545,23 +553,9 @@ header {
   .hostings__cards {
     flex-direction: column;
   }
-  /***** popular mobile *****/
 
-  #popular {
-    background-color: var(--main-bg-color);
-    border-radius: 0%;
-    margin-top: 0px;
-  }
-
-  .popular__cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .popular__cards .card {
-    /* flex-direction: column; */
-    align-self: stretch;
-    min-width: 100%;
+  .hostings__cards a {
+    width: 100%;
   }
 
   /************* Activities mobile *************/
