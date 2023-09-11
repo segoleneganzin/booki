@@ -16,6 +16,6 @@ Les maquettes sont sur [Figma](<https://www.figma.com/file/a6wqEOrgDnqtcZPC1xQNF
 
 VSCode
 
-## Contributing
+## Contributeur
 
 Projet proposé par OpenClassrooms dans le cadre de ma formation en développement JavaScript/React.
