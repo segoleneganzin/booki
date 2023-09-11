@@ -19,6 +19,10 @@ body {
   margin: auto;
 }
 
+.fa-solid {
+  color: var(--main-color);
+}
+
 /* main properties */
 main {
   padding: 0 50px;
@@ -36,18 +40,6 @@ a {
 
 p {
   margin: 0;
-}
-
-.fa-solid {
-  color: var(--main-color);
-}
-
-.talign-c {
-  text-align: center;
-}
-
-.talign-l {
-  text-align: left;
 }
 
 main,
@@ -74,19 +66,19 @@ header {
 }
 
 .header__logo {
-  /* width: 5%; */
   height: 19px;
   padding: 30px 50px;
 }
 
 .header__nav {
-  align-items: flex-start;
   display: flex;
   gap: 4.25rem;
   padding: 0 25px;
+  height: fit-content;
 }
 .header__nav-item {
   padding-top: 14px;
+  text-align: center;
 }
 
 .header__nav-item:hover {
@@ -94,7 +86,7 @@ header {
   color: var(--main-color);
 }
 
-/********************************* search area properties *********************************/
+/********************************* search area *********************************/
 .infos__title {
   display: flex;
   flex-direction: column;
@@ -103,11 +95,11 @@ header {
 /************* Search area form *************/
 .infos__form {
   display: flex;
+  align-items: center;
   width: fit-content;
   max-height: 49px;
   border-radius: 15px;
   border: 1px solid var(--main-bg-color);
-  align-items: center;
   gap: 1.5rem;
   overflow: hidden;
 }
@@ -140,12 +132,6 @@ header {
 
 .infos__form-search-submit--mobile {
   display: none;
-  background-color: var(--main-color);
-  border: 1px solid var(--main-color);
-  border-radius: 15px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  color: var(--bg-color);
-  padding: 15px;
 }
 
 /************* Search area filter *************/
@@ -166,7 +152,6 @@ header {
   font-size: 1.0625rem;
   font-weight: 700;
   display: flex;
-  flex-wrap: nowrap;
   align-items: center;
   gap: 0.625rem;
   height: 3.125rem;
@@ -222,7 +207,7 @@ header {
 
 .card {
   display: flex;
-  background-color: white;
+  background-color: var(--bg-color);
   border-radius: 20px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
@@ -230,13 +215,12 @@ header {
 .card img {
   object-fit: cover;
   border: 5px solid var(--bg-color);
-  align-self: stretch;
   box-sizing: border-box;
 }
 
 .card__title {
   font-size: 1rem;
-  margin: 0%;
+  margin: 0;
 }
 
 .card__subtitle {
@@ -260,7 +244,7 @@ header {
 .card__content-rating--neutral-star {
   color: var(--main-bg-color);
 }
-/********************************* Hosting And Popular properties *********************************/
+/********************************* Hosting And Popular *********************************/
 .hostings-and-popular {
   display: flex;
   justify-content: space-between;
@@ -282,7 +266,7 @@ header {
   justify-content: center;
 }
 
-.hostings__cards a {
+.hostings__cards .card-container {
   width: 30%;
 }
 
@@ -295,7 +279,7 @@ header {
 
 .hostings__cards img {
   border-radius: 20px 20px 0 0;
-  min-height: 114px;
+  height: 114px;
 }
 
 .hostings__cards .card__content {
@@ -337,7 +321,7 @@ header {
   gap: 0.3125rem;
 }
 /********************************* Activities properties *********************************/
-.activities__cards a {
+.activities__cards .card-container {
   width: 23%;
 }
 
@@ -346,7 +330,6 @@ header {
   border-radius: 20px;
   height: 439px;
   padding: 0;
-  flex: 1 0 0;
 }
 
 .activities__cards img {
@@ -402,6 +385,7 @@ header {
   /************* Hostings and popular tablet *************/
   .hostings-and-popular {
     flex-direction: column;
+    gap: 3.125rem;
   }
 
   /***** hostings tablet *****/
@@ -411,22 +395,19 @@ header {
 
   /***** popular tablet *****/
   .popular {
-    margin-top: 50px;
     width: 100%;
   }
 
   .popular__cards {
-    display: flex;
     flex-direction: row;
-    align-items: center;
     gap: 1.25rem;
   }
 
-  .popular__cards a {
+  .popular__cards .card-container {
     width: 33%;
   }
   /************* Activities tablet *************/
-  .activities__cards a {
+  .activities__cards .card-container {
     width: 22%;
   }
   .activities__cards .card {
@@ -437,15 +418,13 @@ header {
     height: 200px;
   }
 
-  .activities__cards .card .card__title {
+  .activities__cards .card__title {
     height: 70px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
   }
-
-  /************* Footer tablet *************/
 }
 
 /* Small devices (phones, less than 768px) */
@@ -453,7 +432,6 @@ header {
   /* *********** header mobile ********************* */
   header {
     flex-direction: column;
-    margin-bottom: 30px;
   }
 
   .header__logo {
@@ -461,13 +439,13 @@ header {
   }
 
   .header__nav {
-    justify-content: center;
     gap: 0;
     padding: 0%;
+    border-bottom: 2px solid var(--main-bg-color);
   }
 
   .header__nav-item {
-    flex-basis: 50%;
+    width: 50%;
     padding: 0 0 15px 0;
   }
 
@@ -491,15 +469,11 @@ header {
 
   .infos__form {
     overflow: visible;
-    width: 100%;
+    width: fit-content;
   }
 
   .infos__form-search-label {
     border-radius: 15px 0 0 15px;
-  }
-
-  .infos__form-search-input {
-    width: 65%;
   }
 
   .infos__form-search-submit {
@@ -530,7 +504,7 @@ header {
 
   .infos__filter-selector-button {
     font-size: 0.875em;
-    width: 48%;
+    flex-basis: 47.5%;
     justify-content: stretch;
   }
 
@@ -547,7 +521,7 @@ header {
     flex-direction: column;
   }
 
-  .popular__cards a {
+  .popular__cards .card-container {
     width: 100%;
   }
 
@@ -565,8 +539,27 @@ header {
     flex-direction: column;
   }
 
-  .hostings__cards a {
+  .hostings__cards .card-container {
     width: 100%;
+  }
+
+  /* .hostings__cards .card-container:nth-child(1) {
+    order: 1;
+  } */
+  .hostings__cards .card-container:nth-child(2) {
+    order: 6;
+  }
+  .hostings__cards .card-container:nth-child(3) {
+    order: 3;
+  }
+  .hostings__cards .card-container:nth-child(4) {
+    order: 4;
+  }
+  .hostings__cards .card-container:nth-child(5) {
+    order: 2;
+  }
+  .hostings__cards .card-container:nth-child(6) {
+    order: 5;
   }
 
   /************* Activities mobile *************/
@@ -574,7 +567,7 @@ header {
     flex-direction: column;
   }
 
-  .activities__cards a {
+  .activities__cards .card-container {
     width: 100%;
   }
   .activities__cards .card {
