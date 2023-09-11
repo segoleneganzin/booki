@@ -1,4 +1,4 @@
-# booki
+# Booki
 
 # Intégration d'une maquette Figma en HTML/CSS
 
