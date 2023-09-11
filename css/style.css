@@ -2,10 +2,6 @@
 /* google font Raleway */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
 /************************************************* General *************************************************/
-* {
-  font-family: "Raleway", sans-serif;
-}
-
 :root {
   --main-color: #0065fc;
   --main-bg-color: #f2f2f2;
@@ -13,12 +9,13 @@
   --filter-bg-color: #deebff;
   --infos-border-color: #d9d9d9;
 }
-
+* {
+  font-family: "Raleway", sans-serif;
+}
 body {
   max-width: 1440px;
   margin: auto;
 }
-
 .fa-solid {
   color: var(--main-color);
 }
@@ -27,33 +24,27 @@ body {
 main {
   padding: 0 50px;
 }
-
+p {
+  margin: 0;
+}
 a {
   color: inherit;
   text-decoration: none;
 }
-
 p,
 a {
   font-size: 1rem;
 }
-
-p {
-  margin: 0;
-}
-
 main,
 .infos {
   display: flex;
   flex-direction: column;
   gap: 2.1875rem;
 }
-
 .highlight-word {
   font-size: 1.125rem;
   font-weight: 700;
 }
-
 .euro {
   font-weight: 700;
 }
@@ -64,24 +55,20 @@ header {
   justify-content: space-between;
   margin-bottom: 30px;
 }
-
 .header__logo {
   height: 19px;
   padding: 30px 50px;
 }
-
 .header__nav {
   display: flex;
   gap: 4.25rem;
   padding: 0 50px;
   height: fit-content;
 }
-
 .header__nav-item {
   padding-top: 16px;
   text-align: center;
 }
-
 .header__nav-item:hover {
   border-top: 2px solid var(--main-color);
   color: var(--main-color);
@@ -104,7 +91,6 @@ header {
   gap: 1.5rem;
   overflow: hidden;
 }
-
 .infos__form-search-label {
   background-color: var(--main-bg-color);
   height: 49px;
@@ -112,17 +98,14 @@ header {
   display: flex;
   justify-content: center;
 }
-
 .infos__form-search-label i {
   color: black;
   align-self: center;
 }
-
 .infos__form-search-input {
   border: none;
-  padding: 0%;
+  padding: 10px;
 }
-
 /* search submit */
 .infos__form-search-submit {
   background-color: var(--main-color);
@@ -130,7 +113,6 @@ header {
   color: var(--bg-color);
   padding: 15px 16px;
 }
-
 .infos__form-search-submit--mobile {
   display: none;
 }
@@ -142,13 +124,11 @@ header {
   align-items: center;
   gap: 0.9375rem;
 }
-
 .infos__filters-selector {
   display: flex;
   flex-wrap: wrap;
   gap: 0.9375rem;
 }
-
 .infos__filter-selector-button {
   font-size: 1.0625rem;
   font-weight: 700;
@@ -163,7 +143,6 @@ header {
   justify-content: center;
   white-space: nowrap;
 }
-
 .infos__filter-selector-button:hover {
   background-color: var(--filter-bg-color);
 }
@@ -175,7 +154,6 @@ header {
   align-self: stretch;
   gap: 0.625rem;
 }
-
 .infos__informations-icon {
   border: 1px solid var(--infos-border-color);
   width: 24px;
@@ -194,7 +172,6 @@ header {
   flex-direction: column;
   gap: 1.875rem;
 }
-
 .section-container__title {
   font-size: 1.375rem;
   margin: 0;
@@ -205,29 +182,24 @@ header {
   display: flex;
   gap: 1.875rem;
 }
-
 .card {
   display: flex;
   background-color: var(--bg-color);
   border-radius: 20px;
   box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1);
 }
-
 .card img {
   object-fit: cover;
   border: 5px solid var(--bg-color);
   box-sizing: border-box;
 }
-
 .card__title {
   font-size: 1rem;
   margin: 0;
 }
-
 .card__subtitle {
   font-size: 0.875em;
 }
-
 .card__content {
   box-sizing: border-box;
   display: flex;
@@ -235,22 +207,20 @@ header {
   padding: 10px 5px 5px 15px;
   justify-content: space-between;
 }
-
 .card__content-txt {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-
 .card__content-rating--neutral-star {
   color: var(--main-bg-color);
 }
+
 /********************************* Hosting And Popular *********************************/
 .hostings-and-popular {
   display: flex;
   justify-content: space-between;
 }
-
 .hostings-and-popular section {
   background-color: var(--main-bg-color);
   border-radius: 20px;
@@ -261,33 +231,27 @@ header {
 .hostings {
   width: 65%;
 }
-
 .hostings__cards {
   flex-flow: row wrap;
   justify-content: center;
 }
-
 .hostings__cards .card-container {
   width: 30%;
 }
-
 .hostings__cards .card {
   flex-direction: column;
   gap: 0.25rem;
   padding: 0 0 15px 0;
   height: 192px;
 }
-
 .hostings__cards img {
   border-radius: 20px 20px 0 0;
   height: 114px;
 }
-
 .hostings__cards .card__content {
   padding: 0 15px;
   gap: 0.5rem;
 }
-
 .hostings__cards .card__content-txt {
   gap: 0.5rem;
 }
@@ -296,49 +260,42 @@ header {
 .popular {
   width: 32%;
 }
-
 .popular__title {
   align-items: center;
   display: flex;
   justify-content: space-between;
 }
-
 .popular__cards {
   flex-direction: column;
 }
-
 .popular__cards .card {
   height: 145px;
 }
-
 .popular__cards img {
   border-radius: 20px 0 0 20px;
   min-height: 140px;
   width: 33%;
   border-right: none;
 }
-
 .popular__cards .card__content-txt {
   gap: 0.3125rem;
 }
+
 /********************************* Activities properties *********************************/
 .activities__cards .card-container {
   width: 23%;
 }
-
 .activities__cards .card {
   flex-direction: column;
   border-radius: 20px;
   height: 439px;
   padding: 0;
 }
-
 .activities__cards img {
   height: 380px;
   border-radius: 20px 20px 0px 0px;
   border: none;
 }
-
 .activities__cards .card__title {
   padding: 20px 19px;
   box-sizing: border-box;
@@ -351,29 +308,27 @@ header {
   margin: 35px 50px 0 50px;
   padding: 0px;
 }
-
 .footer__section {
   padding: 20px;
   width: 33%;
 }
-
+.footer-title {
+  margin: 0%;
+}
 .footer__section-list {
   list-style: none;
   margin: 0%;
   padding: 0%;
 }
-
 .footer__section-list,
 .footer__section-list-item {
   margin-top: 15px;
 }
 
 /************************************************* Media queries *************************************************/
-
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
   /************** infos tablet ***********************/
-
   /***** infos filters  tablet*****/
   .infos__filters {
     flex-direction: column;
@@ -398,15 +353,14 @@ header {
   .popular {
     width: 100%;
   }
-
   .popular__cards {
     flex-direction: row;
     gap: 1.25rem;
   }
-
   .popular__cards .card-container {
     width: 33%;
   }
+
   /************* Activities tablet *************/
   .activities__cards .card-container {
     width: 22%;
@@ -414,11 +368,9 @@ header {
   .activities__cards .card {
     height: 270px;
   }
-
   .activities__cards img {
     height: 200px;
   }
-
   .activities__cards .card__title {
     height: 70px;
     display: flex;
@@ -434,22 +386,18 @@ header {
   header {
     flex-direction: column;
   }
-
   .header__logo {
     margin: auto;
   }
-
   .header__nav {
     gap: 0;
     padding: 0%;
     border-bottom: 2px solid var(--main-bg-color);
   }
-
   .header__nav-item {
     width: 50%;
     padding: 0 0 15px 0;
   }
-
   .header__nav-item:hover {
     border-top: none;
     border-bottom: 2px solid var(--main-color);
@@ -460,27 +408,23 @@ header {
   main {
     padding: 0;
   }
-  /************** infos mobile ***********************/
 
+  /************** infos mobile ***********************/
   /***** infos area form  mobile*****/
   .infos {
     padding: 0 20px;
     align-items: center;
   }
-
   .infos__form {
     overflow: visible;
     width: fit-content;
   }
-
   .infos__form-search-label {
     border-radius: 15px 0 0 15px;
   }
-
   .infos__form-search-submit {
     display: none;
   }
-
   .infos__form-search-submit--mobile {
     display: block;
     position: relative;
@@ -491,7 +435,6 @@ header {
     color: var(--main-bg-color);
     padding: 15px;
   }
-
   .infos__form-search-submit--mobile i {
     color: var(--main-bg-color);
     height: 17px;
@@ -502,7 +445,6 @@ header {
   .infos__filters-selector {
     justify-content: space-between;
   }
-
   .infos__filter-selector-button {
     font-size: 0.875em;
     flex-basis: 47.5%;
@@ -515,6 +457,7 @@ header {
   .hostings-and-popular {
     gap: 0.9375rem;
   }
+
   /***** popular mobile *****/
   #popular {
     background-color: var(--main-bg-color);
@@ -522,33 +465,28 @@ header {
     margin-top: 0px;
     padding: 30px 20px;
   }
-
   .popular__cards {
     flex-direction: column;
   }
-
   .popular__cards .card-container {
     width: 100%;
   }
-
   .popular__cards img {
     min-height: 146px;
   }
+
   /***** hostings mobile *****/
   #hostings {
     order: 2;
     padding: 1.25rem;
     background-color: var(--bg-color);
   }
-
   .hostings__cards {
     flex-direction: column;
   }
-
   .hostings__cards .card-container {
     width: 100%;
   }
-
   .hostings__cards .card-container:nth-child(2) {
     order: 6;
   }
@@ -569,7 +507,6 @@ header {
   .activities__cards {
     flex-direction: column;
   }
-
   .activities__cards .card-container {
     width: 100%;
   }
@@ -587,7 +524,6 @@ header {
     margin: 35px 0 0 0;
     gap: 3.125rem;
   }
-
   .footer__section {
     width: 100%;
     padding: 0%;
