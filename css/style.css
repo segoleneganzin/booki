@@ -348,6 +348,7 @@ header {
   /***** popular tablet *****/
   .popular {
     width: 100%;
+    gap: 1.25rem;
   }
   .popular__cards {
     flex-direction: row;
