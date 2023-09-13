@@ -74,27 +74,23 @@ header {
   color: var(--main-color);
 }
 
-/********************************* search area *********************************/
+/********************************* Infos area *********************************/
 .infos__title {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
-/************* Search area form *************/
+/************* Infos area form *************/
 .infos__form {
   display: flex;
-  align-items: center;
   width: fit-content;
-  max-height: 49px;
-  border-radius: 15px;
   border: 1px solid var(--main-bg-color);
-  gap: 1.5rem;
+  border-radius: 15px;
   overflow: hidden;
 }
 .infos__form-search-label {
   background-color: var(--main-bg-color);
-  height: 49px;
-  width: 3.125rem;
+  min-width: 50px;
   display: flex;
   justify-content: center;
 }
@@ -104,7 +100,7 @@ header {
 }
 .infos__form-search-input {
   border: none;
-  padding: 10px;
+  padding: 0 25px;
 }
 /* search submit */
 .infos__form-search-submit {
@@ -117,7 +113,7 @@ header {
   display: none;
 }
 
-/************* Search area filter *************/
+/************* Infos area filter *************/
 .infos__filters {
   display: flex;
   flex-wrap: wrap;
@@ -147,7 +143,7 @@ header {
   background-color: var(--filter-bg-color);
 }
 
-/************* Search area information *************/
+/************* Infos area information *************/
 .infos__informations {
   display: flex;
   align-items: center;
@@ -241,12 +237,12 @@ header {
 .hostings__cards .card {
   flex-direction: column;
   gap: 0.25rem;
-  padding: 0 0 15px 0;
+  padding-bottom: 15px;
   height: 192px;
 }
 .hostings__cards img {
   border-radius: 20px 20px 0 0;
-  height: 114px;
+  min-height: 124px;
 }
 .hostings__cards .card__content {
   padding: 0 15px;
