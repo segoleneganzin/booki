@@ -1,5 +1,4 @@
 # Booki
-![Booki]([https://user.oc-static.com/upload/2022/06/22/16559016787093_Untitled%20design.png](https://user.oc-static.com/upload/2022/06/20/16557256333819_FR_1155_P3_Banner-Booki.png))
 
 ## Transformez une maquette en site web avec HTML & CSS
 
@@ -13,7 +12,7 @@ Cette application est développée en **desktop first**. <br>
 
 ### 💡 Technologies
 
-Utilisation de HTML et CSS uniquement.
+Utilisation de HTML et CSS uniquement. <br>
 Figma ( [voir la maquette](<https://www.figma.com/file/a6wqEOrgDnqtcZPC1xQNFw/Maquettes-Booki-(desktop%2C-mobile%2C-tablette)-(Copy)?node-id=3%3A0&mode=dev>) )
 
 ### 🎯 Objectifs
